@@ -13,3 +13,23 @@ Preencher a variável **ConnectionStrings__ApplicationInsights** para habilitar 
 ## Worker
 
 Imagem: **renatogroffe/workertests-dotnet8:2**
+
+Script KEDA utilizado como base:
+
+```yaml
+apiVersion: keda.sh/v1alpha1
+kind: ScaledObject
+metadata:
+  name: cron-scaledobject
+spec:
+  minReplicaCount: 4
+  scaleTargetRef:
+    name: workertests-cron
+  triggers:
+  - type: cron
+    metadata:
+      timezone: America/Sao_Paulo
+      start: 55 23 * * *
+      end: 58 23 * * *
+      desiredReplicas: "10"
+```
