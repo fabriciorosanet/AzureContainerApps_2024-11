@@ -33,3 +33,9 @@ spec:
       end: 58 23 * * *
       desiredReplicas: "10"
 ```
+
+## Job
+
+Imagem: **renatogroffe/dotnet9-job-notificacao**
+
+Webhook para tratar as requisições: **https://github.com/renatogroffe/ASPNETCore8-REST_API-Logging-MonitoramentoWebhooks**
