@@ -39,3 +39,5 @@ spec:
 Imagem: **renatogroffe/dotnet9-job-notificacao**
 
 Webhook para tratar as requisições: **https://github.com/renatogroffe/ASPNETCore8-REST_API-Logging-MonitoramentoWebhooks**
+
+Preencher a variável **EndpointNotificacao** com o endereço do Webhook.
